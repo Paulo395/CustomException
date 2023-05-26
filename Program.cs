@@ -3,6 +3,7 @@ using CustomExceptions.Entities.Exceptions;
 using Microsoft.Win32;
 using System;
 using System.Security.Principal;
+using System.Xml;
 
 namespace CustomExceptions // Note: actual namespace depends on the project name.
 {
@@ -19,23 +20,23 @@ namespace CustomExceptions // Note: actual namespace depends on the project name
 
             Console.Write("Enter account data\n" +
                 "Number: ");
-            int number = int.Parse(Console.ReadLine());
+            int number = ValidationTypeInt();
 
             Console.Write("Holder: ");
-            string holder = Console.ReadLine();
+            string holder = ValidationString();
 
             Console.Write("Inicial Balance: ");
-            double balance = double.Parse(Console.ReadLine());
+            double balance = ValidationTypeDouble();
 
             Console.Write("Withdraw limit: ");
-            double wLimit = double.Parse(Console.ReadLine());
+            double wLimit = ValidationTypeDouble();
 
             account = new Account(number, holder, balance, wLimit);
 
             try
             {
                 Console.Write("\nEnter amount for withdraw: ");
-                double whitdraw = double.Parse(Console.ReadLine());
+                double whitdraw = ValidationTypeDouble();
 
                 account.Withdraw(whitdraw);
 
@@ -45,6 +46,57 @@ namespace CustomExceptions // Note: actual namespace depends on the project name
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public static int ValidationTypeInt()
+        {
+            string input;
+            bool parseSucess;
+            int number;
+
+            do
+            {
+                input = ValidationString();
+                parseSucess = int.TryParse(input, out number);
+
+                if (parseSucess == false) Console.WriteLine("Invalid Input");
+
+            } while (parseSucess == false);
+
+            return number;
+        }
+
+        public static double ValidationTypeDouble()
+        {
+            string input;
+            bool parseSucess;
+            double number;
+
+            do
+            {
+                input = ValidationString();
+                parseSucess = double.TryParse(input, out number);
+
+                if (parseSucess == false) Console.WriteLine("Invalid Input");
+
+            } while (parseSucess == false);
+
+            return number;
+        }
+
+        public static string ValidationString()
+        {
+            string input;
+
+            do
+            {
+                input = Console.ReadLine();
+
+                if (string.IsNullOrEmpty(input)) Console.WriteLine("Digite uma entrada válida");
+
+            } while (string.IsNullOrEmpty(input));
+
+            return input;
         }
     }
 }

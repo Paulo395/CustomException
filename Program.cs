@@ -1,9 +1,5 @@
 ﻿using CustomExceptions.Entities;
 using CustomExceptions.Entities.Exceptions;
-using Microsoft.Win32;
-using System;
-using System.Security.Principal;
-using System.Xml;
 
 namespace CustomExceptions // Note: actual namespace depends on the project name.
 {

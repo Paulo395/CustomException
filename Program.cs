@@ -25,7 +25,7 @@ namespace CustomExceptions // Note: actual namespace depends on the project name
             Console.Write("Holder: ");
             string holder = ValidationString();
 
-            Console.Write("Inicial Balance: ");
+            Console.Write("Initial Balance: ");
             double balance = ValidationTypeDouble();
 
             Console.Write("Withdraw limit: ");

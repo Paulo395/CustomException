@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "hXnxnaK57J8loAVwm3lgyRjy/K70ZpGl0FHB1E7Xj88Mg+/9XXOsJRth+/vQ6A70+ZsWebYJdsh7fi0IH1ffgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pauli\\source\\repos\\CustomExceptions\\CustomExceptions\\CustomExceptions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
